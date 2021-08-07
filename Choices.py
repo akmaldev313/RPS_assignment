@@ -9,13 +9,20 @@ class Game:
     def type(self):
         selection = False
         while selection is False:
-            game_type = int(input("Select Game Mode\n1)Human vs Computer\n2)Computer vs Computer\n"))
-            if game_type == 1 or game_type == 2:
-                selection = True
-                return game_type
-            else:
-                print("Invalid input")
-                selection = False
+            try:
+                game_type = int(input("Select Game Mode\n1)Human vs Computer\n2)Computer vs Computer\n"))
+
+                if game_type == 1 or game_type == 2:
+                    selection = True
+                    return game_type
+                else:
+                    print("Invalid input, please enter 1 or 2")
+            except ValueError:
+                print("Invalid input, please enter 1 or 2")
+                continue
+
+
+
 
     def clear(self):
         import os
