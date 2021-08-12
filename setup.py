@@ -10,7 +10,7 @@ from setuptools import setup
 APP = ['rps.py']
 DATA_FILES = []
 OPTIONS = {
-    'argv_simulation': True
+    'argv_emulation': True
 }
 
 setup(
