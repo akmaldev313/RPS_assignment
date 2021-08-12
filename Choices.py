@@ -1,12 +1,26 @@
-#Includes all possible choices
+"""
+Includes all possible choices
 
-#Game Type
+"""
+
+
 class Game:
+    """
+    This class is a blueprint for
+    1)Type of game User wants to play
+    2)New game when User wants to play again
+    """
     def __init__(self):
         pass
 
 
     def type(self):
+        """
+            This method is to choose between the two type of Game Modes
+            1) Human vs Computer
+            2) Computer vs Computer
+            :return: Returns a 1 or 2, for mode variable in main.py
+            """
         selection = False
         while selection is False:
             try:
@@ -25,15 +39,21 @@ class Game:
 
 
     def clear(self):
+        """"
+        This method is to clear screen and begin new game
+        """
         import os
         os.system('cls' if os.name == 'nt' else 'clear')
 
 
 
-# Below class is for 'weapons'
-# Can be added on for future additions (i.e Spock, Lizard)
+
 
 class Weapon:
+    """
+    Below class is for 'weapons'
+    dictionary can be added on for future additions (e.g Spock, Lizard)
+    """
     def __init__(self):
         self.weapons = {
             #rock
@@ -65,15 +85,28 @@ class Weapon:
         '''
         }
 
-    def selected(self, sel):
+    def selected(self, select):
+        """
+
+        :param select: from input requested in main.py
+        :return: Returns int value matching the selected 'weapon'. used for arguement in main.py to compare
+        """
         for selection in self.weapons:
-            if sel == selection:
+            if select == selection:
                 print(self.weapons[selection])
                 weapon_key = selection
                 return weapon_key
 
 
     def compare(self, first,second):
+        """
+        compares player1 vs player2 weapon_key.
+        determines outcome of the game (win/lose/draw)
+
+        :param first: int, to capture player1 'weapon'
+        :param second: int, to capture player2 'weapon'
+        :return: returns end_game as True or False, for end_game variable in main.py
+        """
         if first == 0:
             if second == 0:
                 print("Its a DRAW!")

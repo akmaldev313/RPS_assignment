@@ -36,6 +36,9 @@ while end_game is False:
             correct_input = True
             game.clear()
             end_game = False
+            '''
+            returns to the first while loop, requesting user input for game.type()
+            '''
 
         elif new == "n":
             print("Thank you for playing! Done by AK")
@@ -44,4 +47,3 @@ while end_game is False:
         else:
             print("Invalid Input")
             correct_input = False
-
