@@ -1,4 +1,4 @@
- """
+"""
  py2app/py2exe build script for MyApplication.
 
  Will automatically ensure that all build prerequisites are available
@@ -9,16 +9,16 @@
 
  Usage (Windows):
      python setup.py py2exe
- """
- import ez_setup
- ez_setup.use_setuptools()
+"""
+import ez_setup
+ez_setup.use_setuptools()
 
- import sys
- from setuptools import setup
+import sys
+from setuptools import setup
 
- mainscript = 'MyApplication.py'
+mainscript = 'main.py'
 
- if sys.platform == 'darwin':
+if sys.platform == 'darwin':
      extra_options = dict(
          setup_requires=['py2app'],
          app=[mainscript],
@@ -26,7 +26,7 @@
          # be used for opening files.
          options=dict(py2app=dict(argv_emulation=True)),
      )
- elif sys.platform == 'win32':
+elif sys.platform == 'win32':
      extra_options = dict(
          setup_requires=['py2exe'],
          app=[mainscript],
@@ -39,6 +39,6 @@ else:
      )
 
 setup(
-    name="MyApplication",
+    name="main",
     **extra_options
 )
