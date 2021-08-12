@@ -19,7 +19,7 @@ class Game:
             This method is to choose between the two type of Game Modes
             1) Human vs Computer
             2) Computer vs Computer
-            :return: Returns a 1 or 2, for mode variable in main.py
+            :return: Returns a 1 or 2, for mode variable in rps.py
             """
         selection = False
         while selection is False:
@@ -88,8 +88,8 @@ class Weapon:
     def selected(self, select):
         """
 
-        :param select: from input requested in main.py
-        :return: Returns int value matching the selected 'weapon'. used for arguement in main.py to compare
+        :param select: from input requested in rps.py
+        :return: Returns int value matching the selected 'weapon'. used for arguement in rps.py to compare
         """
         for selection in self.weapons:
             if select == selection:
@@ -105,7 +105,7 @@ class Weapon:
 
         :param first: int, to capture player1 'weapon'
         :param second: int, to capture player2 'weapon'
-        :return: returns end_game as True or False, for end_game variable in main.py
+        :return: returns end_game as True or False, for end_game variable in rps.py
         """
         if first == 0:
             if second == 0:
