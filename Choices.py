@@ -20,6 +20,7 @@ class Game:
             1) Human vs Computer
             2) Computer vs Computer
             :return: Returns a 1 or 2, for mode variable in rps.py
+            ********try & exception was used to solve the bug where it woul;d crash if input was other than an integer*******
             """
         selection = False
         while selection is False:

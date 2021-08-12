@@ -35,6 +35,7 @@ while end_game is False:
         if new == "y":
             correct_input = True
             game.clear()
+            print(logo)
             end_game = False
             '''
             returns to the first while loop, requesting user input for game.type()
