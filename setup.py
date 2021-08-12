@@ -2,7 +2,7 @@ from setuptools import setup
 
 APP = ['rps.py']
 OPTIONS = {
-    'argvemulation':True,
+    'argv_emulation':True,
 }
 setup(
     app=APP,
